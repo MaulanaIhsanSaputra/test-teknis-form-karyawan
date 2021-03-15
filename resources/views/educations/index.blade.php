@@ -57,7 +57,6 @@
         <td>{{ $education->tahun_lulus }}</td>
         <td>
             <form action="{{ route('educations.destroy',$education->id) }}" method="POST">
-                <a class="btn btn-info" id="show-education" data-toggle="modal" data-id="{{ $education->id }}">Show</a>
                 <a href="javascript:void(0)" class="btn btn-success" id="edit-education" data-toggle="modal"
                     data-id="{{ $education->id }}">Edit </a>
                 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -191,8 +190,6 @@
         <td>{{ $experience->tahun }}</td>
         <td>
             <form action="{{ route('experiences.destroy',$experience->id) }}" method="POST">
-                <a class="btn btn-info" id="show-experience" data-toggle="modal"
-                    data-id="{{ $experience->id }}">Show</a>
                 <a href="javascript:void(0)" class="btn btn-success" id="edit-experience" data-toggle="modal"
                     data-id="{{ $experience->id }}">Edit </a>
                 <meta name="csrf-token" content="{{ csrf_token() }}">

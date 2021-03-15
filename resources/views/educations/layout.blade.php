@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <title>Laravel7 CRUD @fahmidasclassroom.com</title>
+    <title>Form Karyawan</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -20,7 +20,6 @@
 </body>
 <script>
     $(document).ready(function () {
-        /* When click New customer button */
         $('#new-education').click(function () {
             $('#btn-save').val("create-education");
             $('#education').trigger("reset");
@@ -28,13 +27,6 @@
             $('#crud-modal').modal('show');
         });
 
-        /* Show customer */
-        $('body').on('click', '#show-education', function () {
-            $('#educationCrudModal-show').html("Eduaction Details");
-            $('#crud-modal-show').modal('show');
-        });
-
-        /* Edit customer */
         $('body').on('click', '#edit-education', function () {
             var education_id = $(this).data('id');
             $.get('educations/' + education_id + '/edit', function (data) {
@@ -50,7 +42,6 @@
             })
         });
 
-        /* Delete customer */
         $('body').on('click', '#delete-education', function () {
             var education_id = $(this).data("id");
             var token = $("meta[name='csrf-token']").attr("content");
@@ -77,7 +68,6 @@
 
     $(document).ready(function () {
 
-        /* When click New customer button */
         $('#new-experience').click(function () {
             $('#btn-save').val("create-experience");
             $('#experience').trigger("reset");
@@ -85,13 +75,6 @@
             $('#crud-modal-experience').modal('show');
         });
 
-        /* Show customer */
-        $('body').on('click', '#show-experience', function () {
-            $('#experienceCrudModal-show').html("Experience Details");
-            $('#crud-modal-show-experience').modal('show');
-        });
-
-        /* Edit customer */
         $('body').on('click', '#edit-experience', function () {
             var experience_id = $(this).data('id');
             $.get('experiences/' + experience_id + '/edit', function (data) {
@@ -106,7 +89,6 @@
             })
         });
 
-        /* Delete customer */
         $('body').on('click', '#delete-experience', function () {
             var experience_id = $(this).data("id");
             var token = $("meta[name='csrf-token']").attr("content");
